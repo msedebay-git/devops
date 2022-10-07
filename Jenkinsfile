@@ -7,5 +7,14 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        sh '''ls -ltr
+mvn --version 
+git --version
+java -version'''
+      }
+    }
+
   }
 }
