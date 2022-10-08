@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout code') {
       steps {
-        git(url: 'https://github.com/msedebay-git/devops.git', branch: 'master')
+        git(url: 'https://github.com/msedebay-git/spring-petclinic.git', branch: 'master')
       }
     }
 
