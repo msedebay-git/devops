@@ -9,7 +9,7 @@ pipeline {
 
     stage('mvn build') {
       steps {
-        sh 'mvn dependency::tree'
+        sh 'mvn clean'
       }
     }
 
