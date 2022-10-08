@@ -1,4 +1,6 @@
 FROM openjdk:8-jdk-alpine
-COPY target/*.jar app.jar
+COPY . /src/java
+WORKDIR /src/java
+RUN ["javac", "javaExample.java"]
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","javaExample.java"]
